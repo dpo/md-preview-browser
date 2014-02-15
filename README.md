@@ -2,6 +2,14 @@
 
 This is a simple OSX service that allows you to select Markdown code and preview it in the browser. It supports MathJax and code highlighting. I use it to send plain text e-mails containing Markdown code, including math using LaTeX syntax and code.
 
+Because it is a service, you can use it in any application. Type Markdown in your favorite text editor, select all or a portion of your document, activate your service, and voilà!
+
+## Features
+
+* Supports [Mathjax](http://www.mathjax.org) using LaTeX syntax
+* Makes it easy to copy and paste between Markdown and LaTeX documents because the math delimiters are the same, i.e., you use `\(`, `\)`, `\[` and `\]`, not `\\(`, `\\[`, etc.
+* Code highlighting via [highlight.js](http://highlightjs.org)
+
 ## Requirements
 
 The only requirements are [MultiMarkdown](http://fletcherpenney.net/multimarkdown) and the simple [browser script](https://gist.github.com/defunkt/318247). I strongly recommend to use [Homebrew](http://brew/sh):
@@ -12,13 +20,9 @@ brew install browser
 
 ## Installing
 
-Open Automator and create a new service. In the left-most column, select
-`Utilities` and in the next column, select `Run Shell Script`. Your service
-"receives selected text in any application". Make sure the box "Output replaces
-selected text" is left unchecked.
+Open Automator and create a new service. In the left-most column, select `Utilities` and in the next column, select `Run Shell Script`. Your service "receives selected text in any application". Make sure the box "Output replaces selected text" is left unchecked.
 
-Paste the contents of `md-preview-browser.txt` into the shell script body. The
-result should look similar to this:
+Paste the contents of `md-preview-browser.txt` into the shell script body. The result should look similar to this:
 
 ![Automator Screenshot](md-preview-browser.png "Automator Screenshot")
 
