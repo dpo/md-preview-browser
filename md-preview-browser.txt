@@ -1,2 +1,23 @@
 LANG=en_US.UTF-8 /usr/bin/pbcopy;
-echo "<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'><style> $(cat /Users/dpo/Documents/css/Byword.css) </style> <link rel='stylesheet' href='http://yandex.st/highlightjs/7.3/styles/default.min.css'> <script src='http://yandex.st/highlightjs/7.3/highlight.min.js'></script> <script>hljs.initHighlightingOnLoad();</script> <script type='text/javascript' src='https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML.js'></script> $(pbpaste | /usr/local/bin/multimarkdown --smart -t html)" | /usr/local/bin/browser
+echo "<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'> <link rel='stylesheet' href='http://yandex.st/highlightjs/8.0/styles/default.min.css'>
+<script src='http://yandex.st/highlightjs/8.0/highlight.min.js'></script> <script>hljs.initHighlightingOnLoad();</script> <script type='text/javascript' src='https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML.js'></script><script type='text/x-mathjax-config'>  
+  MathJax.Hub.Config({
+      config: ['TeX-MML-AM_HTMLorMML.js'],
+      extensions: ['tex2jax.js','TeX/AMSmath.js','TeX/AMSsymbols.js'],
+      jax: ['input/TeX'],
+      tex2jax: {
+          inlineMath: [ ['$','$'], ['\(','\)'] ],
+          displayMath: [ ['$$','$$'], ['\[','\]'] ],
+          processEscapes: false
+      },
+      TeX: {
+          TagSide: 'right',
+          TagIndent: '.8em',
+          MultLineWidth: '85%',
+          equationNumbers: {
+             autoNumber: 'AMS',
+          }
+      },
+      showProcessingMessages: false
+  });
+</script> $(LANG=en_US.UTF-8 pbpaste | sed -e 's/\([^\[]\)\^/\1<latexpower>/g;s/_/<latexsub>/g;s/\&/<latexalignment>/g;s/\\\\/<latexnewline>/g;s/\\|/<latexnorm>/g' | /usr/local/bin/multimarkdown --smart -t html)" | sed -e 's/<latexpower>/\^/g;s/<latexsub>/_/g;s/<latexalignment>/\&/g;s/<latexnewline>/\\\\/g;s/<latexnorm>/\\|/g' | /usr/local/bin/browser
