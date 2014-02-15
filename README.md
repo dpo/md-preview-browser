@@ -22,6 +22,8 @@ result should look similar to this:
 
 ![Automator Screenshot](md-preview-browser.png "Automator Screenshot")
 
+(Note that I don't update the screenshot as often as I update the code.)
+
 Save your workflow and exit automator. I choose to name it `md-preview-browser`.
 
 ## Testing
@@ -32,11 +34,11 @@ You should now be able to select the following snippet and choose `md-preview-br
     # This is a just a test
 
     This test includes the [Dennis-Moré condition](http://dx.doi.org/10.1137/1019005)
-    \\[
+    \[
     \lim_{k \to \infty}
     \frac{\|(H_k - \nabla^2 f(x_*)) (x_{k+1} - x_k)\|}{\|x_{k+1} - x_k\|} = 0
-    \\]
-    in a display math environment and also some inline math: \\(f \in \mathcal{C}^2\\).
+    \]
+    in a display math environment and also some inline math: \(f \in \mathcal{C}^2\).
 
     ## Bonus
 
@@ -52,6 +54,9 @@ You should now be able to select the following snippet and choose `md-preview-br
         class SomeClass:
             pass
 
+## Notes
+
+In some places, the LaTeX and Markdown syntaxes conflict. For example, avoid using underscores to emphasize text. The use of stars in formulae can also produce unpredictable results. Open an issue to let me know.
 
 Enjoy!
 
