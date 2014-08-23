@@ -1,6 +1,4 @@
-LANG=en_US.UTF-8 /usr/bin/pbcopy;
-echo "<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'> <link rel='stylesheet' href='http://yandex.st/highlightjs/8.0/styles/default.min.css'>
-<script src='http://yandex.st/highlightjs/8.0/highlight.min.js'></script> <script>hljs.initHighlightingOnLoad();</script> <script type='text/javascript' src='https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML.js'></script><script type='text/x-mathjax-config'>  
+LANG=en_US.UTF-8 /usr/bin/pbcopy; echo "<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'> <link rel='stylesheet' href='http://yandex.st/highlightjs/8.0/styles/default.min.css'> <script src='http://yandex.st/highlightjs/8.0/highlight.min.js'></script> <script>hljs.initHighlightingOnLoad();</script> <script type='text/javascript' src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML.js'></script><script type='text/x-mathjax-config'>
   MathJax.Hub.Config({
       config: ['TeX-MML-AM_HTMLorMML.js'],
       extensions: ['tex2jax.js','TeX/AMSmath.js','TeX/AMSsymbols.js'],
