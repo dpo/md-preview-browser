@@ -64,3 +64,7 @@ In some places, the LaTeX and Markdown syntaxes conflict. For example, avoid usi
 
 Enjoy!
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/dpo/md-preview-browser/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
